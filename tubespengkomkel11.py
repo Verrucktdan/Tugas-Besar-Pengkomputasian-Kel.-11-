@@ -108,10 +108,9 @@ if 0 < choice <= 3:
     while c=="y" and (c!="n" or c!=""):
         dest+=[input("Titik destinasi/tujuan: ")]
         c = input("Masih ada lagi?(y/n): ")
-    
     for l in start:
         print("Rute tercepat dari titik %s" %l)
-        print("{:>6}{:>12}        {}".format("Menuju", "Jarak", "Rute"))
+        print("Menuju       Jarak        Rute")
         for m in dest:
             jarak, rute = rute_eff(l, m)
-            print("{:>6}{:>12}        {}".format(m, jarak, rute))
+            print(f"{m:>6}{jarak:>12}       ", rute)
