@@ -23,7 +23,7 @@ def matrix_baru():
     while (state=="" or state=="y") and state!="n":
         dari = int(input("dari titik: "))
         ke = int(input("ke titik: "))
-        jarak = int(input("dengan jarak: "))
+        jarak = float(input("dengan jarak: "))
         matrix[dari-1][ke-1] = jarak
         state = input("Masih mau menginput jarak?(y/n): ")
     return grid, matrix
